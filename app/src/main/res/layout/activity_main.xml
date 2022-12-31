@@ -6,100 +6,134 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    android:background="#4EB7E6"
+    android:background="#010A0E"
     tools:context=".MainActivity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
-        <EditText
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5sp"
-            android:hint="Search wallpaper"
-            android:paddingStart="6sp"
-            android:textSize="20sp"
-            android:id="@+id/searchEditTextId"/>
-        <ImageView
-            android:layout_width="38sp"
-            android:layout_height="38sp"
-            android:src="@drawable/ic_baseline_search_24"
-            android:layout_alignParentEnd="true"
-            android:layout_centerInParent="true"
-            android:id="@+id/searchImgButton"/>
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="50sp"
+                android:background="#fff"
+                app:cardCornerRadius="20sp"
+                android:layout_marginTop="20sp"
+                android:layout_marginStart="20sp"
+                android:layout_marginEnd="20sp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
 
-    </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="160sp"
-            android:layout_height="70sp"
-            android:text="nature"
-            android:background="@drawable/button_background"
-            android:layout_marginStart="30sp"
-            android:id="@+id/natureButtonMainId"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="160sp"
-            android:layout_height="70sp"
-            android:text="Bus"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="30sp"
-            android:background="@drawable/button_background"
-            android:id="@+id/busButtonMainId"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="160sp"
-            android:layout_height="70sp"
-            android:text="car"
-            android:background="@drawable/button_background"
-            android:layout_marginStart="30sp"
-            android:id="@+id/carButtonMainId"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="160sp"
-            android:layout_height="70sp"
-            android:text="train"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="30sp"
-            android:background="@drawable/button_background"
-            android:id="@+id/trainButtonMainId"/>
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp">
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_width="160sp"
-            android:layout_height="70sp"
-            android:text="trending"
-            android:background="@drawable/button_background"
-            android:layout_marginStart="30sp"
-            android:id="@+id/trendButtonMainId"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="40sp"
+                        android:layout_margin="5sp"
+                        android:background="#fff"
+                        android:hint="Search wallpaper"
+                        android:paddingStart="6sp"
+                        android:textSize="20sp"
+                        android:id="@+id/searchEditTextId"/>
+                    <ImageView
+                        android:layout_width="38sp"
+                        android:layout_height="38sp"
+                        android:src="@drawable/ic_baseline_search_24"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/searchImgButton"/>
 
 
-    </RelativeLayout>
+                </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recycleViewMainId"
-        android:layout_marginTop="10sp">
+            </androidx.cardview.widget.CardView>
 
 
-    </androidx.recyclerview.widget.RecyclerView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120sp"
+                    android:layout_height="60sp"
+                    android:text="nature"
+                    android:background="@drawable/button_background"
+                    android:layout_marginStart="20sp"
+                    android:id="@+id/natureButtonMainId"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120sp"
+                    android:layout_height="60sp"
+                    android:layout_marginEnd="20sp"
+                    android:text="Bus"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/button_background"
+                    android:id="@+id/busButtonMainId"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120sp"
+                    android:layout_height="60sp"
+                    android:layout_marginStart="20sp"
+                    android:text="car"
+                    android:background="@drawable/button_background"
+                    android:id="@+id/carButtonMainId"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120sp"
+                    android:layout_height="60sp"
+                    android:layout_marginEnd="20sp"
+                    android:text="train"
+                    android:layout_alignParentEnd="true"
+
+                    android:background="@drawable/button_background"
+                    android:id="@+id/trainButtonMainId"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="120sp"
+                    android:layout_height="60sp"
+                    android:layout_marginStart="20sp"
+                    android:text="trending"
+                    android:background="@drawable/button_background"
+                    android:id="@+id/trendButtonMainId"/>
+
+
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recycleViewMainId"
+                android:layout_marginTop="10sp">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
 
 
 
