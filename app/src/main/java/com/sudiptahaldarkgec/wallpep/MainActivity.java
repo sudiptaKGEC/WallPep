@@ -42,7 +42,8 @@ public class MainActivity extends AppCompatActivity {
         searchButton = findViewById(R.id.searchImgButton);
 
         modelClassList = new ArrayList<>();
-        recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+//        recyclerView.setLayoutManager(new GridLayoutManager(this, 2)); /// number of picture in a row
+        recyclerView.setLayoutManager(new GridLayoutManager(this, 1));
         recyclerView.setHasFixedSize(true);
         adapter = new Adapter(getApplicationContext(), modelClassList);
         recyclerView.setAdapter(adapter);

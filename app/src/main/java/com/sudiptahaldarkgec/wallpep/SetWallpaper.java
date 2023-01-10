@@ -30,6 +30,8 @@ public class SetWallpaper extends AppCompatActivity {
         imageView = findViewById(R.id.ImgVIewSetWallId);
         button  = findViewById(R.id.setWallpaperButtonId);
 
+        getSupportActionBar().hide();
+
         final WallpaperManager wallpaperManager = WallpaperManager.getInstance(getApplicationContext());
 
         Intent intent = getIntent();
